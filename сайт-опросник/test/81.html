@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">81. MSC-51. Что делает команда CMA?</p>
+    <label><input type="checkbox" id="one">Инвертирование А</label>
+    <label><input type="checkbox" id="two">Очистка А</label>
+    <label><input type="checkbox" id="three">Пересылка в стек А</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === false && three.checked ===  false
+     || hint === true) { 
+        document.location.href="82.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: инвертирование А</p>
+        <p class="description"> команда CMA - инвертирование А                 
+        </p>
+    </div>
+  </body>
+</html>     
+ 
+ 

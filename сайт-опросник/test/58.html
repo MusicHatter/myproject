@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">58. Что делает команда CPE?</p>
+    <label><input type="checkbox" id="one">Вызов подпрограммы при минусе</label>
+    <label><input type="checkbox" id="two">Вызов подпрограммы при плюсе</label>
+    <label><input type="checkbox" id="three">Безусловный вызов подпрограммы</label>
+    <label><input type="checkbox" id="four">Вызов подпрограммы при четности</label>
+    <label><input type="checkbox" id="five">Переход при нечетности</label>
+    <label><input type="checkbox" id="six">Вызов подпрограммы при нуле</label>
+    <label><input type="checkbox" id="seven">Вызов подпрограммы при отсутствии нуля</label>
+    <label><input type="checkbox" id="eight">Вызов подпрограммы при переносе</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked ===  false
+    && four.checked === true && five.checked === false && six.checked === false
+    && seven.checked === false && eight.checked ===  false || hint === true) { 
+        document.location.href="59.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: вызов подпрограммы при четности </p>
+        <p class="description"> команда CPE - вызов подпрограммы при четности    
+        </p>
+    </div>
+  </body>
+</html>    
+   

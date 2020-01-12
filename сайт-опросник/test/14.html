@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">14. Как передаются данные и адрес в двухшинных структурах?</p>
+    <label><input type="checkbox" id="one">Последовательно</label>
+    <label><input type="checkbox" id="two">Параллельно</label>
+    <label><input type="checkbox" id="three">По частоте</label>
+    <label><input type="checkbox" id="four">Произвольно</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === true &&
+    four.checked === false || hint === true) { 
+        document.location.href="15.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: по частоте </p>
+        <p class="description">В магистрали с двумя шинами данные и адрес передаются по 
+            тактам: в начале цикла — адрес, в конце цикла — данные</p>
+    </div>
+  </body>
+</html>   

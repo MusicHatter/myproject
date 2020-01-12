@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">40. MSC-51. Что делает команда POP?</p>
+    <label><input type="checkbox" id="one">Востанавливает значение стека</label>
+    <label><input type="checkbox" id="two">Пересылает значение в стек</label>
+    <label><input type="checkbox" id="three">Прямая запись</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === false && three.checked === false 
+     || hint === true) { 
+        document.location.href="41.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Восстанавливает значение стека</p>
+        <p class="description"> команда POP восстанавливает значение стека
+        </p>
+    </div>
+  </body>
+</html>   
+     
+  

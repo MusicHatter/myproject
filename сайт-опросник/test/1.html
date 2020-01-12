@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body class="container">
+    <script>let hint = false;</script>
+    <p class="question">1. Как называется программа, представленная в виде 
+        последовательности чисел, являющаяся командами 
+        для процессора (контроллера, адресов оперативной 
+        памяти, номеров регистров и т.д.) ?</p>
+    <label><input type="checkbox" id="one">Ассемблер</label>
+    <label><input type="checkbox" id="two">C++</label>
+    <label><input type="checkbox" id="three">Мнемокод</label>
+    <label><input type="checkbox" id="four">JavaJava</label>
+    <label><input type="checkbox" id="five">Машинный код</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === false &&
+    four.checked === false && five.checked === true || hint === true) { 
+        document.location.href="2.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Машинный код </p>
+        <p class="description">Компьютерная программа, записанная на 
+            машинном языке, состоит из машинных инструкций, каждая из 
+            которых представлена в машинном коде в виде так называемого 
+            опкода — двоичного кода отдельной операции из системы команд 
+            машины. </p>
+    </div>
+  </body>
+</html> 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">77. MSC-51. Что делает команда RLC?</p>
+    <label><input type="checkbox" id="one">Циклический сдвиг влево</label>
+    <label><input type="checkbox" id="two">Циклический сдвиг вправо</label>
+    <label><input type="checkbox" id="three">Циклический сдвиг влево ,через признак переноса</label>
+    <label><input type="checkbox" id="four">Циклический сдвиг вправо, через признак переноса</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked ===  true
+    && four.checked === false || hint === true) { 
+        document.location.href="78.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: циклический сдвиг влево, через признак переноса </p>
+        <p class="description"> команда RLC - циклический сдвиг влево, через признак переноса                 
+        </p>
+    </div>
+  </body>
+</html>     
+     
+ 
+ 

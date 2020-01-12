@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">4. Какие из утверждений верны? Ассемблер - это:</p>
+    <label><input type="checkbox" id="one">Компилятор с языка понятный человеку, 
+        в команды машинного кода</label>
+    <label><input type="checkbox" id="two">Язык программирования низкого уровня</label>
+    <label><input type="checkbox" id="three">Ни одно утверждение не верно</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === true && three.checked === false || hint === true) { 
+        document.location.href="5.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Язык программирования низкого уровня</p>
+        <p class="description">Ассемблер — это низкоуровневый язык программирования 
+            для компьютеров или других программируемых устройств. Также ассемблером 
+            называют транслятор исходного текста программы, написанной на языке 
+            ассемблера, в программу на машинном языке.</p>
+    </div>
+  </body>
+</html> 
+ 
+ 

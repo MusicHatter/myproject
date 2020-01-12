@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">31. За что отвечает или чему соответсвует четвертый бит регистра F?</p>
+    <label><input type="checkbox" id="one">S</label>
+    <label><input type="checkbox" id="two">Z</label>
+    <label><input type="checkbox" id="three">AC</label>
+    <label><input type="checkbox" id="four">Логический 0</label>
+    <label><input type="checkbox" id="five">Логическая 1</label>
+    <label><input type="checkbox" id="six">P</label>
+    <label><input type="checkbox" id="seven">C</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === true &&
+    four.checked === false && five.checked === false && six.checked === false
+    && seven.checked === false || hint === true) { 
+        document.location.href="32.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: AC</p>
+        <p class="description">AC (Auxiliary Carry Flag) – вспомогательный флаг переноса. Тип флага: состояние.
+        </p>
+    </div>
+  </body>
+</html>   
+   
+ 
+ 

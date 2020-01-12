@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">82. MSC-51. Что делает команда NOP?</p>
+    <label><input type="checkbox" id="one">Нет операция</label>
+    <label><input type="checkbox" id="two">Остановка</label>
+    <label><input type="checkbox" id="three">Задержка</label>
+    <label><input type="checkbox" id="four">Повторный запуск</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === false && three.checked ===  false
+    && four.checked ===  false || hint === true) { 
+        document.location.href="83.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: нет операция</p>
+        <p class="description"> команда NOP - нет операция                 
+        </p>
+    </div>
+  </body>
+</html>     
+ 
+ 
+ 

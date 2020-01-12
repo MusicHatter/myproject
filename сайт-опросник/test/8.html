@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">8. Какие программы позволяют программировать на ассемблера для х86:</p>
+    <label><input type="checkbox" id="one">MASC</label>
+    <label><input type="checkbox" id="two">MPLAB</label>
+    <label><input type="checkbox" id="three">TASM</label>
+    <label><input type="checkbox" id="four">Visual Studio</label>
+    <label><input type="checkbox" id="five">MS-DOS</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === true && three.checked === true &&
+    four.checked === false && five.checked === false || hint === true) { 
+        document.location.href="9.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: TASM, MPLAB</p>
+        <p class="description">Наиболее известные компиляторы это TASM, MASM и FASM. 
+            Также существуют MPLAB, блокнот, Notepad++ и другие.</p>
+    </div>
+  </body>
+</html> 
+ 
+  

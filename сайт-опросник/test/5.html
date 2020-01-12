@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">(?) 5. Что нужно знать, для написания программы на ассемблере?</p>
+    <label><input type="checkbox" id="one">Архитектуру</label>
+    <label><input type="checkbox" id="two">Список команд</label>
+    <label><input type="checkbox" id="three">Тактовую частоту</label>
+    <label><input type="checkbox" id="four">Разрядность системы</label>
+    <label><input type="checkbox" id="five">ОС</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === true && three.checked === false &&
+    four.checked === true && five.checked === true || hint === true) { 
+        document.location.href="6.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: архитектуру, список команд, ОС, разрядность системы </p>
+        <p class="description">Для написания программы на ассемблере нужно знать: 
+            архитектуру, список команд, ОС, разрядность системы</p>
+    </div>
+  </body>
+</html> 
+ 

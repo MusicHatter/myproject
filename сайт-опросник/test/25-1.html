@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">25. За что отвечает регистр F?</p>
+    <label><input type="checkbox" id="one">Содержит адрес текущей команды программы</label>
+    <label><input type="checkbox" id="two">Содержит записанные данные</label>
+    <label><input type="checkbox" id="three">Содержит результат вычисления</label>
+    <label><input type="checkbox" id="four">Содержит адрес и значения ячейки памяти, 
+        к которой было сделано последнее обращение</label>
+    <label><input type="checkbox" id="five">Хранит признаки, данные</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === false 
+    && four.checked === false && five.checked === true || hint === true) { 
+        document.location.href="26.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: хранит признаки, данные.</p>
+        <p class="description">Регистр F хранит признаки, данные.
+        </p>
+    </div>
+  </body>
+</html>   
+ 
+  

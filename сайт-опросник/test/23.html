@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">23. Как называется модель стековой памяти, 
+        когда первый бит информации, который зашел, выходит последним</p>
+    <label><input type="checkbox" id="one">LIFO</label>
+    <label><input type="checkbox" id="two">LILO</label>
+    <label><input type="checkbox" id="three">FIFO</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === false && three.checked === false
+     || hint === true) { 
+        document.location.href="24.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: LIFO</p>
+        <p class="description">LIFO (акроним Last In, First Out, 
+            «последним пришёл — первым ушёл») 
+        </p>
+    </div>
+  </body>
+</html>   
+ 
+ 

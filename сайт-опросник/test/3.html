@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta http-equiv="Cache-Control" content="no-cache">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">3. Какого уровня язык программирования Ассемблер?</p>
+    <label><input type="checkbox" id="one">Низкого</label>
+    <label><input type="checkbox" id="two">Среднего</label>
+    <label><input type="checkbox" id="three">Высокого</label>
+    <label><input type="checkbox" id="four">Алгоритмического</label>
+    <label><input type="checkbox" id="five">Процедурного</label>
+    <label><input type="checkbox" id="six">Объектно-ориентированного</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === false && three.checked === false &&
+    four.checked === false && five.checked === false && six.checked === false || hint === true) { 
+        document.location.href="4.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: низкого</p>
+        <p class="description">Язык Ассемблер — это низкоуровневый язык программирования 
+            для компьютеров или других программируемых устройств.</p>
+    </div>
+  </body>
+</html> 
+ 

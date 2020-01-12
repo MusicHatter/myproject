@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">7. Какие из следующих утверждений являются достоинствами ассемблера:</p>
+    <label><input type="checkbox" id="one">Оптимизация возможностей процессора</label>
+    <label><input type="checkbox" id="two">Обращение напрямую к вычислителю</label>
+    <label><input type="checkbox" id="three">Прямой доступ к портам ввода-ввывода</label>
+    <label><input type="checkbox" id="four">Возможность выполнения параллельных процессов</label>
+    <label><input type="checkbox" id="five">Независимая компиляция</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === true && three.checked === true &&
+    four.checked === false && five.checked === false || hint === true) { 
+        document.location.href="8.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Оптимизация возможностей процессора,
+            обращение напрямую к вычислителю, прямой доступ к портам ввода-вывода</p>
+        <p class="description">Эти утверждения являются достоинствами ассемблера</p>
+    </div>
+  </body>
+</html> 
+ 
+ 

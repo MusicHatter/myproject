@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">36. MSC-51. Что делает команда LXI?</p>
+    <label><input type="checkbox" id="one">Прямая пересылка</label>
+    <label><input type="checkbox" id="two">Непосредственная переcылка данных</label>
+    <label><input type="checkbox" id="three">Загрузка непосредственных данных</label>
+    <label><input type="checkbox" id="four">Косвенная запись</label>
+    <label><input type="checkbox" id="five">Прямая запись</label>
+    <label><input type="checkbox" id="six">Прямая загрузка</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === true &&
+    four.checked === false && five.checked === false && six.checked === false
+     || hint === true) { 
+        document.location.href="37.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Загрузка непосредственных данных </p>
+        <p class="description"> LXI - Загрузка непосредственных данных 
+        </p>
+    </div>
+  </body>
+</html>   
+    
+ 
+ 

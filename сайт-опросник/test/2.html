@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body class="container">
+    <script>let hint = false;</script>
+    <p class="question">2. Каких уровней бывают языки программирования?</p>
+    <label><input type="checkbox" id="one">Низкими</label>
+    <label><input type="checkbox" id="two">Средними</label>
+    <label><input type="checkbox" id="three">Высокими</label>
+    <label><input type="checkbox" id="four">Алгоритмическими</label>
+    <label><input type="checkbox" id="five">Процедурными</label>
+    <label><input type="checkbox" id="six">Объектно-ориентированными</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === true && three.checked === true &&
+    four.checked === false && five.checked === false && six.checked === false || hint === true) { 
+        document.location.href="3.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: низкими, средними, высокими </p>
+        <p class="description"> Языки низкого уровня (машинные коды и ассемблер)
+          <br> Средний уровень ( C, Фортран )
+          <br> Высокий уровень (C++, Java, Python, Ruby, JavaScript )</p>
+    </div>
+  </body>
+</html> 

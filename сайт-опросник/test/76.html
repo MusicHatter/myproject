@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">76. MSC-51. Что делает команда CMP?</p>
+    <label><input type="checkbox" id="one">Логическое И</label>
+    <label><input type="checkbox" id="two">Логическое умножение</label>
+    <label><input type="checkbox" id="three">Логическое или</label>
+    <label><input type="checkbox" id="four">Логическое сложение</label>
+    <label><input type="checkbox" id="five">Сравнение регистра</label>
+    <label><input type="checkbox" id="six">Исключающее или</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked ===  false
+    && four.checked === false && five.checked === true && six.checked === false 
+    || hint === true) { 
+        document.location.href="77.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: сравнение регистра  </p>
+        <p class="description"> команда CMP - сравнение регистра                 
+        </p>
+    </div>
+  </body>
+</html>     
+     
+ 

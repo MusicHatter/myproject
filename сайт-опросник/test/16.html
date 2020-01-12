@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">16. Сколько 8-битных регистров общего назначения в микроконтроллере 8051?</p>
+    <label><input type="checkbox" id="one">1</label>
+    <label><input type="checkbox" id="two">2</label>
+    <label><input type="checkbox" id="three">3</label>
+    <label><input type="checkbox" id="four">4</label>
+    <label><input type="checkbox" id="five">6</label>
+    <label><input type="checkbox" id="six">8</label>
+    <label><input type="checkbox" id="seven">16</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === false &&
+    four.checked === false && five.checked === true && six.checked === false
+    && seven.checked === false || hint === true) { 
+        document.location.href="17.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: 6 </p>
+        <p class="description">Регистры общего назначения BC, DE, HL могут быть использованы
+           как шесть 8-разрядных или три 16-разрядные пары регистров в зависимости от текущей выполняемой команды.
+        </p>
+    </div>
+  </body>
+</html>   
+ 

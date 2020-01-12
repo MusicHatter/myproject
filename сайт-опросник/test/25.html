@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">25. Как называется регистр A?</p>
+    <label><input type="checkbox" id="one">Указатель стека</label>
+    <label><input type="checkbox" id="two">Регистр признаков</label>
+    <label><input type="checkbox" id="three">Регистр общего назначения</label>
+    <label><input type="checkbox" id="four">Аккумулятор</label>
+    <label><input type="checkbox" id="five">Программный счетчик</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === false && three.checked === false &&
+    four.checked === true && five.checked === false || hint === true) { 
+        document.location.href="25-1.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: аккумулятор</p>
+        <p class="description">Регистр A - аккумулятор
+        </p>
+    </div>
+  </body>
+</html>   
+  

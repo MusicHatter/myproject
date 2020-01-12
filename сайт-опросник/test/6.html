@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">(?) 6. Какие из следующих утверждений являются недостатками ассемблера:</p>
+    <label><input type="checkbox" id="one">Отсутствие готовых библиотек, по сравнению с языками выского уровня</label>
+    <label><input type="checkbox" id="two">Большое количество объема кода</label>
+    <label><input type="checkbox" id="three">Объемные программы</label>
+    <label><input type="checkbox" id="four">Трудоемкий для  поиска ошибок</label>
+    <label><input type="checkbox" id="five">Неэффективен (количество/время разработки)</label>
+    <label><input type="checkbox" id="six">Не переносимость на  другие платформы</label>
+    <label><input type="checkbox" id="seven">Труность чтения программы</label>
+    <button class="button" onclick='
+    if (one.checked === true && two.checked === true && three.checked === true &&
+    four.checked === true && five.checked === true && six.checked === true && 
+    seven.checked === true || hint === true) { 
+        document.location.href="7.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: Все</p>
+        <p class="description">Все из перечисленных утверждений являются недостатками ассемблера</p>
+    </div>
+  </body>
+</html> 
+ 

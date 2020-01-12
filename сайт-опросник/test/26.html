@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">26. Как называется регистр F?</p>
+    <label><input type="checkbox" id="one">Указатель стека</label>
+    <label><input type="checkbox" id="two">Регистр признаков</label>
+    <label><input type="checkbox" id="three">Регистр общего назначения</label>
+    <label><input type="checkbox" id="four">Аккумулятор</label>
+    <label><input type="checkbox" id="five">Программный счетчик</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === true && three.checked === false &&
+    four.checked === false && five.checked === false || hint === true) { 
+        document.location.href="27.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: регистр признаков</p>
+        <p class="description">Регистр флагов – иногда его называют регистром признаков – EFLAGS. 
+            Он состоит из одноразрядных флагов, отображающих, в основном, текущее состояние арифметико-логического устройства.
+        </p>
+    </div>
+  </body>
+</html>   
+  

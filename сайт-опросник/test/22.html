@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Тестирование по ассемблеру</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <script>let hint = false;</script>
+    <p class="question">22. Сколько моделей стековой памяти существует?</p>
+    <label><input type="checkbox" id="one">1</label>
+    <label><input type="checkbox" id="two">2</label>
+    <label><input type="checkbox" id="three">3</label>
+    <label><input type="checkbox" id="four">4</label>
+    <label><input type="checkbox" id="five">5</label>
+    <label><input type="checkbox" id="six">6</label>
+    <button class="button" onclick='
+    if (one.checked === false && two.checked === true && three.checked === false &&
+    four.checked === false && five.checked === false && six.checked === false
+     || hint === true) { 
+        document.location.href="22-1.html" 
+        } else {  
+            document.getElementById("hint").style.display = "block";
+            hint = true;
+     }
+     '>
+     Далее</button>
+    <div id="hint">
+        <b class="error">Ошибка!</b> 
+        <p class="answer">Правильный ответ: 2</p>
+        <p class="description">FIFO и LIFO
+        </p>
+    </div>
+  </body>
+</html>   
